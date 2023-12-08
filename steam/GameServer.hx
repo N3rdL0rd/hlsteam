@@ -63,7 +63,7 @@ class GameServer {
 		return null;
 	}
 
-	public static function logonAnonymous( onLogin : Bool -> Void ) {
+	public static function logonAnonymous( onLogin : Bool -> Void, retries = 3 ) {
 
 		var ucb = 100;
 		//SteamServersConnected_t
@@ -73,10 +73,22 @@ class GameServer {
 			onLogin(true);
 			onLogin = null;
 		});
+		function failure(r:Dynamic) {
+			customTrace("CONNECT FAILURE " + r);
+			if(retries > 0) {
+				logonAnonymous(onLogin, retries-1);
+			}
+			else {
+				if( onLogin == null )
+					return;
+				onLogin(false);
+			}
+			onLogin = null;
+		}
 		//SteamServerConnectFailure_t
-		registerGlobalEvent(ucb + 2, function(r:Dynamic) { if( onLogin == null ) return; customTrace("CONNECT FAILURE " + r); onLogin(false); onLogin = null; });
+		registerGlobalEvent(ucb + 2, failure);
 		//SteamServersDisconnected_t
-		registerGlobalEvent(ucb + 3, function(r:Dynamic) { if( onLogin == null ) return; customTrace("CONNECT FAILURE " + r); onLogin(false); onLogin = null; });
+		registerGlobalEvent(ucb + 3, failure);
 		registerGlobalEvent(ucb + 15, function(_:Dynamic) { /* ignore VAC flag */ });
 
 		gameserver_logon_anonymous();
