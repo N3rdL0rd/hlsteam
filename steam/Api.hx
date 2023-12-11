@@ -298,7 +298,7 @@ class Api
 		return _IsSteamInBigPictureMode();
 	}
 
-	public static function issSteamRunningOnSteamDeck() {
+	public static function isSteamRunningOnSteamDeck() {
 		if (!active)
 			return false;
 		return _IsSteamRunningOnSteamDeck();
