@@ -10,8 +10,7 @@ private enum LeaderboardOp
 	DOWNLOAD(id:String);
 }
 
-@:enum
-abstract SteamNotificationPosition(Int) to Int
+enum abstract SteamNotificationPosition(Int) to Int
 {
 	var TopLeft = 0;
 	var TopRight = 1;
@@ -24,7 +23,7 @@ typedef ControllerActionSetHandle = Int;
 typedef ControllerDigitalActionHandle = Int;
 typedef ControllerAnalogActionHandle = Int;
 
-@:enum abstract EventType(Int) {
+enum abstract EventType(Int) {
 	var None                              = 0;
 	var GamepadTextInputDismissed         = 1;
 	var UserStatsReceived                 = 2;

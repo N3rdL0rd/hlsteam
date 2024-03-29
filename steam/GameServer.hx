@@ -1,6 +1,6 @@
 package steam;
 
-@:enum abstract ServerMode(Int) {
+enum abstract ServerMode(Int) {
 	var NoAuthentification = 1;
 	var Authentification = 2;
 	var AuthentificationAndSecure = 3;

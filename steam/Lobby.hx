@@ -1,6 +1,6 @@
 package steam;
 
-@:enum abstract ChatMessageType(Int) {
+enum abstract ChatMessageType(Int) {
 	var Invalid = 0;
 	/** Normal text message from another user **/
 	var ChatMsg = 1;

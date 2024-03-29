@@ -6,7 +6,7 @@ typedef NetworkApi = {
 	function onData( u : User, data : haxe.io.Bytes ) : Void;
 }
 
-@:enum abstract NetworkStatus(Int) {
+enum abstract NetworkStatus(Int) {
 	var None = 0;
 	var NotRunningApp = 1;
 	var NoRigtsToApp = 2;
@@ -14,7 +14,7 @@ typedef NetworkApi = {
 	var Timeout = 4;
 }
 
-@:enum abstract PacketType(Int) {
+enum abstract PacketType(Int) {
 	var Unreliable = 0;
 	var UnreliableNoDelay = 1;
 	var Reliable = 2;

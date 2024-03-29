@@ -1,7 +1,6 @@
 package steam.ugc;
 
-@:enum
-abstract EFileType(Int) from Int to Int {
+enum abstract EFileType(Int) from Int to Int {
 	var Community              =  0;	// normal Workshop item that can be subscribed to
 	var Microtransaction       =  1;	// Workshop item that is meant to be voted on for the purpose of selling in-game
 	var Collection             =  2;	// a collection of Workshop or Greenlight items
@@ -20,8 +19,7 @@ abstract EFileType(Int) from Int to Int {
 	var GameManagedItem        = 15;	// managed completely by the game, not the user, and not shown on the web
 }
 
-@:enum
-abstract EQueryType(Int) from Int to Int {
+enum abstract EQueryType(Int) from Int to Int {
 	var RankedByVote                                  = 0;
 	var RankedByPublicationDate                       = 1;
 	var AcceptedForGameRankedByAcceptanceDate         = 2;
@@ -43,7 +41,7 @@ abstract EQueryType(Int) from Int to Int {
 	var RankedByLifetimePlaytimeSessions              = 18;
 }
 
-@:enum abstract EMatchingType(Int) from Int to Int {
+enum abstract EMatchingType(Int) from Int to Int {
 	/**both mtx items and ready-to-use items**/
 	var Items:Int			= 0;
 	var Items_Mtx:Int		= 1;
@@ -65,8 +63,7 @@ abstract EQueryType(Int) from Int to Int {
 	var All:Int				= ~0;
 }
 
-@:enum 
-abstract EResult(Int) from Int to Int {
+enum abstract EResult(Int) from Int to Int {
 	var OK  = 1;                            // success
 	var Fail = 2;                           // generic failure
 	var NoConnection = 3;                   // no/failed network connection
@@ -176,16 +173,14 @@ abstract EResult(Int) from Int to Int {
 
 }
 
-@:enum 
-abstract EItemVisibility(Int) from Int to Int {
+enum abstract EItemVisibility(Int) from Int to Int {
 	var Public      = 0;
 	var FriendsOnly = 1;
 	var Private     = 2;
 }
 
 
-@:enum 
-abstract EUserList(Int) from Int to Int {
+enum abstract EUserList(Int) from Int to Int {
 	var Published:Int		= 0;
 	var VotedOn:Int			= 1;
 	var VotedUp:Int			= 2;
@@ -197,8 +192,7 @@ abstract EUserList(Int) from Int to Int {
 	var Followed:Int		= 8;
 }
 
-@:enum 
-abstract EUserListSortOrder(Int) from Int to Int {
+enum abstract EUserListSortOrder(Int) from Int to Int {
 	var CreationOrderDesc:Int		= 0;
 	var CreationOrderAsc:Int		= 1;
 	var TitleAsc:Int				= 2;

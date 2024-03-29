@@ -1,6 +1,6 @@
 package steam;
 
-@:enum abstract FriendFlags(Int) {
+enum abstract FriendFlags(Int) {
 	var None = 0;
 	var Blocked = 1;
 	var FriendshipRequested = 2;
@@ -16,7 +16,7 @@ package steam;
 	@:op(a | b) static function or(a:FriendFlags, b:FriendFlags):FriendFlags;
 }
 
-@:enum abstract OverlayKind(String) {
+enum abstract OverlayKind(String) {
 
 	var None = "none";
 
@@ -70,7 +70,7 @@ package steam;
 	public function toString() return this;
 }
 
-@:enum abstract OverlayToStoreFlag(Int) {
+enum abstract OverlayToStoreFlag(Int) {
 	var None = 0;
 	var AddToCart = 1;
 	var AddToCartAndShow = 2;

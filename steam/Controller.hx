@@ -600,7 +600,7 @@ class ESteamControllerLEDFlags {
 
 }
 
-@:enum abstract EControllerActionOrigin(Int) to Int {
+enum abstract EControllerActionOrigin(Int) to Int {
 
 	public static var fromStringMap(default, null):Map<String, EControllerActionOrigin>
 		= MacroHelper.buildMap("steam.EControllerActionOrigin");
@@ -965,13 +965,13 @@ class ESteamControllerLEDFlags {
 
 }
 
-@:enum abstract ESteamControllerPad(Int) to Int {
+enum abstract ESteamControllerPad(Int) to Int {
 	public var LEFT = 0;
 	public var RIGHT = 1;
 	public var BOTH = 2;
 }
 
-@:enum abstract EControllerSource(Int) to Int {
+enum abstract EControllerSource(Int) to Int {
 	public var NONE = 0;
 	public var LEFTTRACKPAD = 1;
 	public var RIGHTTRACKPAD = 2;
@@ -984,7 +984,7 @@ class ESteamControllerLEDFlags {
 	public var COUNT = 9;
 }
 
-@:enum abstract EControllerSourceMode(Int) to Int {
+enum abstract EControllerSourceMode(Int) to Int {
 	public var NONE = 0;
 	public var DPAD = 1;
 	public var BUTTONS = 2;
@@ -1000,12 +1000,12 @@ class ESteamControllerLEDFlags {
 	public var MOUSEREGION = 12;
 }
 
-@:enum abstract EGamepadTextInputLineMode(Int) to Int {
+enum abstract EGamepadTextInputLineMode(Int) to Int {
 	public var SINGLE_LINE = 0;
 	public var MULTIPLE_LINES = 1;
 }
 
-@:enum abstract EGamepadTextInputMode(Int) to Int {
+enum abstract EGamepadTextInputMode(Int) to Int {
 	public var NORMAL = 0;
 	public var PASSWORD = 1;
 }

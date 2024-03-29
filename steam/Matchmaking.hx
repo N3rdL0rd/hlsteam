@@ -1,6 +1,6 @@
 package steam;
 
-@:enum abstract LobbyKind(Int) {
+enum abstract LobbyKind(Int) {
 	/**
 		Only way to join the lobby is to invite to someone else
 	**/
@@ -19,7 +19,7 @@ package steam;
 	public var Invisible = 3;
 }
 
-@:enum abstract ComparisonFilter(Int) {
+enum abstract ComparisonFilter(Int) {
 	var LessThanEqual = -2;
 	var LessThan = -1;
 	var Equal = 0;
@@ -28,7 +28,7 @@ package steam;
 	var NotEqual = 3;
 }
 
-@:enum abstract DistanceFilter(Int) {
+enum abstract DistanceFilter(Int) {
 	var Close = 0;
 	var Default = 1;
 	var Far = 2;
