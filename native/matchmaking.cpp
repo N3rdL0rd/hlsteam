@@ -89,6 +89,7 @@ DEFINE_PRIM(_VOID, request_result_count, _I32);
 // --------- Lobby Create / Manage --------------------------
 
 static void on_lobby_created( vclosure *c, LobbyCreated_t *result, bool error ) {
+	error = error || result->m_eResult != k_EResultOK;
 	vdynamic d;
 	hl_set_uid(&d,error ? 0 : result->m_ulSteamIDLobby);
 	dyn_call_result(c,&d,error);
