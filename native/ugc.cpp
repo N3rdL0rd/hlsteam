@@ -21,7 +21,7 @@ HL_PRIM varray *HL_NAME(get_subscribed_items)(){
 
 	int result = SteamUGC()->GetSubscribedItems(pvecPublishedFileID, numSubscribed);
 	if( result <= 0 ) {
-		delete pvecPublishedFileID;
+		delete[] pvecPublishedFileID;
 		return hl_alloc_array(&hlt_bytes, 0);
 	}
 
@@ -30,8 +30,7 @@ HL_PRIM varray *HL_NAME(get_subscribed_items)(){
 	
 	for (int i = 0; i < result; i++)
 		aa[i] = hl_of_uint64(pvecPublishedFileID[i]);
-	delete pvecPublishedFileID;
-	a->size = result;
+	delete[] pvecPublishedFileID;
 	return a;
 }
 
