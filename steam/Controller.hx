@@ -449,7 +449,7 @@ class Controller
 
 	@:hlNative("steam","init_controllers") private static function _InitControllers() : Bool { return false; }
 	@:hlNative("steam","shutdown_controllers") private static function _ShutdownControllers() : Bool { return false; }
-	@:hlNative("steam","get_connected_controllers") private static function _GetConnectedControllers( arr : hl.NativeArray<Int> ) : hl.NativeArray<Int>  { return null; }
+	@:hlNative("steam","get_connected_controllers") private static function _GetConnectedControllers( arr : hl.NativeArray<Int> ) : hl.NativeArray<Int> { return null; }
 	@:hlNative("steam","get_digital_action_origins") private static function _GetDigitalActionOrigins( controller : Int, action : Int, digitalAction : Int ) : hl.NativeArray<Int> { return null; }
 	@:hlNative("steam","get_entered_gamepad_text_input") private static function _GetEnteredGamepadTextInput() : hl.Bytes { return null; }
 	@:hlNative("steam","get_analog_action_origins") private static function _GetAnalogActionOrigins( controller : Int, action : Int, analogAction : Int ) : hl.NativeArray<Int> { return null; }
@@ -659,7 +659,7 @@ enum abstract EControllerActionOrigin(Int) to Int {
 	public var PS4_RIGHTBUMPER = 44;
 	public var PS4_OPTIONS = 45;
 	public var PS4_SHARE = 46;
-	public var PS4_LEFTPAD_TOUCH  = 47;
+	public var PS4_LEFTPAD_TOUCH = 47;
 	public var PS4_LEFTPAD_SWIPE = 48;
 	public var PS4_LEFTPAD_CLICK = 49;
 	public var PS4_LEFTPAD_DPADNORTH = 50;
@@ -673,7 +673,7 @@ enum abstract EControllerActionOrigin(Int) to Int {
 	public var PS4_RIGHTPAD_DPADSOUTH = 58;
 	public var PS4_RIGHTPAD_DPADWEST = 59;
 	public var PS4_RIGHTPAD_DPADEAST = 60;
-	public var PS4_CENTERPAD_TOUCH  = 61;
+	public var PS4_CENTERPAD_TOUCH = 61;
 	public var PS4_CENTERPAD_SWIPE = 62;
 	public var PS4_CENTERPAD_CLICK = 63;
 	public var PS4_CENTERPAD_DPADNORTH = 64;

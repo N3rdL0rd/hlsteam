@@ -35,13 +35,13 @@ HL_PRIM varray *HL_NAME(get_subscribed_items)(){
 }
 
 HL_PRIM int HL_NAME(get_item_state)(vuid publishedFileID){
-	if (!CheckInit() || publishedFileID  == NULL) return 0;
+	if (!CheckInit() || publishedFileID == NULL) return 0;
 	PublishedFileId_t nPublishedFileID = (PublishedFileId_t)hl_to_uint64(publishedFileID);
 	return SteamUGC()->GetItemState(nPublishedFileID);
 }
 
 HL_PRIM bool HL_NAME(get_item_download_info)(vuid publishedFileID, double *downloaded, double *total ){
-	if (!CheckInit() || publishedFileID  == NULL) return false;
+	if (!CheckInit() || publishedFileID == NULL) return false;
 
 	PublishedFileId_t nPublishedFileID = (PublishedFileId_t)hl_to_uint64(publishedFileID);
 
@@ -67,7 +67,7 @@ HL_PRIM bool HL_NAME(download_item)(vuid publishedFileID, bool highPriority){
 }
 
 HL_PRIM vdynamic *HL_NAME(get_item_install_info)(vuid publishedFileID){
-	if (!CheckInit() || publishedFileID  == NULL) return NULL;
+	if (!CheckInit() || publishedFileID == NULL) return NULL;
 
 	PublishedFileId_t nPublishedFileID = (PublishedFileId_t)hl_to_uint64(publishedFileID);
 
@@ -100,12 +100,12 @@ static void on_item_subscribed(vclosure *c, RemoteStorageSubscribePublishedFileR
 	}
 }
 HL_PRIM CClosureCallResult<RemoteStorageSubscribePublishedFileResult_t>* HL_NAME(subscribe_item)(vuid publishedFileID, vclosure *closure) {
-	if (!CheckInit() || publishedFileID  == NULL) return NULL;
+	if (!CheckInit() || publishedFileID == NULL) return NULL;
 	ASYNC_CALL(SteamUGC()->SubscribeItem(hl_to_uint64(publishedFileID)), RemoteStorageSubscribePublishedFileResult_t, on_item_subscribed);
 	return m_call;
 }
 HL_PRIM CClosureCallResult<RemoteStorageSubscribePublishedFileResult_t>* HL_NAME(unsubscribe_item)(vuid publishedFileID, vclosure *closure) {
-	if (!CheckInit() || publishedFileID  == NULL) return NULL;
+	if (!CheckInit() || publishedFileID == NULL) return NULL;
 	ASYNC_CALL(SteamUGC()->UnsubscribeItem(hl_to_uint64(publishedFileID)), RemoteStorageSubscribePublishedFileResult_t, on_item_subscribed);
 	return m_call;
 }

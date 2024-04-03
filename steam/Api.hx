@@ -561,7 +561,7 @@ class LeaderboardScore {
 	}
 
 	public function toString():String {
-		return leaderboardId  + "," + score + "," + detail + "," + rank;
+		return leaderboardId + "," + score + "," + detail + "," + rank;
 	}
 
 	public static function fromString(str:String):LeaderboardScore {

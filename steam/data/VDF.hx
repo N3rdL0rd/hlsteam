@@ -39,13 +39,13 @@ class VDF
 	private static inline var STRING = '"';
 	private static inline var NODE_OPEN = '{';
 	private static inline var NODE_CLOSE = '}';
-	private static inline var BR_OPEN =  '[';
-	private static inline var BR_CLOSE =  ']';
+	private static inline var BR_OPEN = '[';
+	private static inline var BR_CLOSE = ']';
 	private static inline var COMMENT = '/';
 	private static inline var CR = '\r';
 	private static inline var LF = '\n';
-	private static inline var SPACE =  ' ';
-	private static inline var TAB =  '\t';
+	private static inline var SPACE = ' ';
+	private static inline var TAB = '\t';
 	private static var WHITESPACE(default, null) = [' ', "\t", "\r", "\n"];
 	
 	public static function parse(string:String):Dynamic
@@ -74,7 +74,7 @@ class VDF
 			switch(c)
 			{
 				case NODE_OPEN:
-					next_is_value = false;  // Make sure the next string is interpreted as a key.
+					next_is_value = false; // Make sure the next string is interpreted as a key.
 					
 					var parsed = _parse(stream, i + 1);
 					Reflect.setField(deserialized, laststr, parsed.obj);
@@ -111,14 +111,14 @@ class VDF
 						{
 							if (Reflect.hasField(deserialized, laststr) && lastbrk != null)
 							{
-								lastbrk = null;  // Ignore this sentry if it's the second bracketed expression
+								lastbrk = null; // Ignore this sentry if it's the second bracketed expression
 							}
 							else
 							{
 								Reflect.setField(deserialized, laststr, string);
 							}
 						}
-						c = STRING;  // Force c == string so lasttok will be set properly.
+						c = STRING; // Force c == string so lasttok will be set properly.
 						laststr = string;
 						next_is_value = !next_is_value;
 					}

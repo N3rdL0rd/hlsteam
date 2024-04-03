@@ -64,7 +64,7 @@ enum abstract EMatchingType(Int) from Int to Int {
 }
 
 enum abstract EResult(Int) from Int to Int {
-	var OK  = 1;                            // success
+	var OK = 1;                             // success
 	var Fail = 2;                           // generic failure
 	var NoConnection = 3;                   // no/failed network connection
 	//var NoConnectionRetry = 4;            // OBSOLETE - removed
@@ -148,12 +148,12 @@ enum abstract EResult(Int) from Int to Int {
 	var RestrictedDevice = 82;              // The device being used is not allowed to perform this action
 	var RegionLocked = 83;                  // The action could not be complete because it is region restricted
 	var RateLimitExceeded = 84;             // Temporary rate limit exceeded; try again later; different from var LimitExceeded which may be permanent
-	var AccountLoginDeniedNeedTwoFactor = 85;   // Need two-factor code to login
+	var AccountLoginDeniedNeedTwoFactor = 85; // Need two-factor code to login
 	var ItemDeleted = 86;                   // The thing we're trying to access has been deleted
 	var AccountLoginDeniedThrottle = 87;    // login attempt failed; try to throttle response to possible attacker
 	var TwoFactorCodeMismatch = 88;         // two factor code mismatch
-	var TwoFactorActivationCodeMismatch = 89;   // activation code for two-factor didn't match
-	var AccountAssociatedToMultiplePartners = 90;   // account has been associated with multiple partners
+	var TwoFactorActivationCodeMismatch = 89; // activation code for two-factor didn't match
+	var AccountAssociatedToMultiplePartners = 90; // account has been associated with multiple partners
 	var NotModified = 91;                   // data not modified
 	var NoMobileDevice = 92;                // the account does not have a mobile device associated with it
 	var TimeNotSynced = 93;                 // the time presented is out of range or tolerance

@@ -34,8 +34,8 @@ void CallbackHandler::OnLeaderboardFound(LeaderboardFindResult_t *pCallback, boo
 }
 
 bool CallbackHandler::UploadScore(const std::string& leaderboardId, int score, int detail){
-   	if (m_leaderboards.find(leaderboardId) == m_leaderboards.end() || m_leaderboards[leaderboardId] == 0)
-   		return false;
+	if (m_leaderboards.find(leaderboardId) == m_leaderboards.end() || m_leaderboards[leaderboardId] == 0)
+		return false;
 
 	SteamAPICall_t hSteamAPICall = SteamUserStats()->UploadLeaderboardScore(m_leaderboards[leaderboardId], k_ELeaderboardUploadScoreMethodKeepBest, score, &detail, 1);
 	m_callResultUploadScore.Set(hSteamAPICall, this, &CallbackHandler::OnScoreUploaded);
@@ -62,8 +62,8 @@ void CallbackHandler::OnScoreUploaded(LeaderboardScoreUploaded_t *pCallback, boo
 }
 
 bool CallbackHandler::DownloadScores(const std::string& leaderboardId, int numBefore, int numAfter){
-   	if (m_leaderboards.find(leaderboardId) == m_leaderboards.end() || m_leaderboards[leaderboardId] == 0)
-   		return false;
+	if (m_leaderboards.find(leaderboardId) == m_leaderboards.end() || m_leaderboards[leaderboardId] == 0)
+		return false;
 
  	// load the specified leaderboard data around the current user
  	SteamAPICall_t hSteamAPICall = SteamUserStats()->DownloadLeaderboardEntries(m_leaderboards[leaderboardId], k_ELeaderboardDataRequestGlobalAroundUser, -numBefore, numAfter);
@@ -174,28 +174,28 @@ HL_PRIM bool HL_NAME(set_achievement)(vbyte *name){
 DEFINE_PRIM(_BOOL, set_achievement, _BYTES);
 
 HL_PRIM bool HL_NAME(get_achievement)(vbyte *name) {
-  if (!CheckInit()) return false;
-  bool achieved = false;
-  SteamUserStats()->GetAchievement((char*)name, &achieved);
-  return achieved;
+	if (!CheckInit()) return false;
+	bool achieved = false;
+	SteamUserStats()->GetAchievement((char*)name, &achieved);
+	return achieved;
 }
 DEFINE_PRIM(_BOOL, get_achievement, _BYTES);
 
 HL_PRIM vbyte *HL_NAME(get_achievement_display_attribute)(vbyte *name, vbyte *key){
-  if (!CheckInit()) return (vbyte*)"";
-  return (vbyte*)SteamUserStats()->GetAchievementDisplayAttribute((char*)name, (char*)key);
+	if (!CheckInit()) return (vbyte*)"";
+	return (vbyte*)SteamUserStats()->GetAchievementDisplayAttribute((char*)name, (char*)key);
 }
 DEFINE_PRIM(_BYTES, get_achievement_display_attribute, _BYTES _BYTES);
 
 HL_PRIM int HL_NAME(get_num_achievements)(){
-  if (!CheckInit()) return 0;
-  return (int)SteamUserStats()->GetNumAchievements();
+	if (!CheckInit()) return 0;
+	return (int)SteamUserStats()->GetNumAchievements();
 }
 DEFINE_PRIM(_I32, get_num_achievements, _NO_ARG);
 
 HL_PRIM vbyte *HL_NAME(get_achievement_name)(int index){
-  if (!CheckInit()) return (vbyte*)"";
-  return (vbyte*)SteamUserStats()->GetAchievementName(index);
+	if (!CheckInit()) return (vbyte*)"";
+	return (vbyte*)SteamUserStats()->GetAchievementName(index);
 }
 DEFINE_PRIM(_BYTES, get_achievement_name, _I32);
 

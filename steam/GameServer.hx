@@ -31,7 +31,7 @@ class GameServer {
 		@:privateAccess gameserver_config( modDir.toUtf8(), product.toUtf8(), desc.toUtf8() );
 	}
 
-	public static function setInfo( maxPlayers, password,  serverName : String, botCount : Int, mapName : String ) {
+	public static function setInfo( maxPlayers, password, serverName : String, botCount : Int, mapName : String ) {
 		@:privateAccess gameserver_info( maxPlayers, password, serverName.toUtf8(), botCount, mapName.toUtf8() );
 	}
 

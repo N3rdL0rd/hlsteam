@@ -88,7 +88,7 @@ class Query {
 	public var totalResults(default,null) : Int;
 	public var cached(default,null) : Bool;
 
-	public static function list( type : EQueryType, ugcType : EMatchingType, creatorApp : Int, consumerApp : Int, page : Int )  : Query {
+	public static function list( type : EQueryType, ugcType : EMatchingType, creatorApp : Int, consumerApp : Int, page : Int ) : Query {
 		var id = ugc_query_create_all_request(type,ugcType,creatorApp,consumerApp,page);
 		if( id == null ) return null;
 		return new Query(id);
