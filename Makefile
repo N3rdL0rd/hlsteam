@@ -2,7 +2,7 @@ LBITS := $(shell getconf LONG_BIT)
 
 UNAME := $(shell uname)
 
-CFLAGS = -Wall -O3 -fPIC -I sdk/public -I $(HASHLINK_SRC)/src -std=c++0x
+CFLAGS = -Wall -O3 -fPIC -I native/include -I $(HASHLINK_SRC)/src -std=c++0x
 
 ifeq ($(UNAME),Darwin)
 OS=osx
@@ -12,7 +12,7 @@ OS=linux
 ARCH=$(LBITS)
 endif
 
-LFLAGS = -lhl -lsteam_api -lstdc++ -L sdk/redistributable_bin/$(OS)$(ARCH)
+LFLAGS = -lhl -lsteam_api -lstdc++ -L native/lib/$(OS)$(ARCH)
 
 SRC = native/cloud.o native/common.o native/controller.o native/friends.o native/gameserver.o \
 	native/matchmaking.o native/networking.o native/stats.o native/ugc.o
