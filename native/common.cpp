@@ -140,11 +140,16 @@ HL_PRIM bool HL_NAME(open_overlay)(vbyte *url){
 	return true;
 }
 
+HL_PRIM bool HL_NAME(is_user_logged_in)(){
+	return (SteamUser() != nullptr);
+}
+
 DEFINE_PRIM(_BOOL, init, _FUN(_VOID, _I32 _BOOL _BYTES) _FUN(_VOID, _I32 _DYN));
 DEFINE_PRIM(_VOID, set_notification_position, _I32);
 DEFINE_PRIM(_VOID, shutdown, _NO_ARG);
 DEFINE_PRIM(_VOID, run_callbacks, _NO_ARG);
 DEFINE_PRIM(_BOOL, open_overlay, _BYTES);
+DEFINE_PRIM(_BOOL, is_user_logged_in, _NO_ARG);
 
 //-----------------------------------------------------------------------------------------------------------
 
