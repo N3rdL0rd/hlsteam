@@ -127,42 +127,42 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetExt>.hdll</TargetExt>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <LibraryPath>../Steamworks-SDK/redistributable_bin;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetExt>.hdll</TargetExt>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <LibraryPath>../Steamworks-SDK/redistributable_bin;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2013|Win32'">
     <TargetExt>.hdll</TargetExt>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <LibraryPath>../Steamworks-SDK/redistributable_bin;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2017|Win32'">
     <TargetExt>.hdll</TargetExt>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <LibraryPath>../Steamworks-SDK/redistributable_bin;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>../Steamworks-SDK/redistributable_bin/win64;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <TargetExt>.hdll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LibraryPath>../Steamworks-SDK/redistributable_bin/win64;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <TargetExt>.hdll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2013|x64'">
     <LibraryPath>../Steamworks-SDK/redistributable_bin/win64;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <TargetExt>.hdll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVS2017|x64'">
     <LibraryPath>../Steamworks-SDK/redistributable_bin/win64;../hlmod-hl/build/bin;$(LibraryPath)</LibraryPath>
-    <IncludePath>../Steamworks-SDK/public;$(HASHLINK_SRC)/src;$(IncludePath)</IncludePath>
+    <IncludePath>../Steamworks-SDK/public;../hlmod-hl/src;$(IncludePath)</IncludePath>
     <TargetExt>.hdll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
